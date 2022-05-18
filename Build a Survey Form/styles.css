@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@200;300;400;600;700&family=Open+Sans:wght@400;500&display=swap');
+
+body {
+    background: rgba(58, 58, 158, 0.8);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    min-width: 320px;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0%;
+    box-sizing: border-box;
+    background-image: url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#main-form {
+    background: #1b1b32cc;
+    margin: 0 auto;
+    border-radius: 4px;
+    width: 50%;
+    max-width: 900px;
+    padding: 2.5rem;
+    padding-top: 20px;
+    color: whitesmoke;
+    text-align: left;
+}
+
+h1,
+p {
+    color: whitesmoke;
+}
+
+.labels {
+    width: 100%;
+    padding: 5px;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+.rightTab {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.input-field {
+    height: 2rem;
+    width: 100%;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+}
+
+#userAge {
+    width: 100%;
+}
+
+.userRatings,
+input[type="checkbox"] {
+    float: left;
+    margin-right: 5px;
+}
+
+#submit {
+    background-color: #37AF65;
+    border-radius: 4px;
+    color: white;
+    font-size: 1em;
+    height: 40px;
+    width: 100%;
+    margin: 10px;
+    border: 0px solid;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background: darkgreen;
+}
+
+.dropdown {
+    height: 35px;
+    width: 100%;
+    padding: 5px;
+    margin: 10px;
+    margin-top: 15px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+}
+
+.radio,
+.checkbox {
+    position: relative;
+    left: -43px;
+    margin-left: 10px;
+    display: block;
+    padding-bottom: 10px;
+}
+
+
+span {
+    font-size: 0.8rem;
+}
+
+textarea {
+    height: 6rem !important;
+    resize: vertical;
+}
+
+/*-------------Tablet View (For Responsive Design)--------------*/
+
+@media screen and (max-width: 833px) {
+    .input-field {
+        width: 80%;
+    }
+
+    select {
+        width: 90%;
+    }
+}
+
+
+/*-------------Mobile View (For Responsive Design)--------------*/
+
+@media screen and (max-width: 520px) {
+    .labels {
+        width: 90%;
+        text-align: left;
+    }
+
+    .rightTab {
+        width: 95%;
+        float: left;
+        font-size: 0.8rem;
+    }
+
+    .input-field {
+        width: 100%;
+    }
+
+    select {
+        width: 100%;
+    }
+}
