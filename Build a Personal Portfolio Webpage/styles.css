@@ -1,21 +1,7 @@
-/*-----Custom properties/variables---------*/
-
-:root {
-    --main-white: #f0f0f0;
-    --main-red: #a3d4f5;
-    --main-blue: #45567d;
-    --main-gray: #303841;
-    --main-pink: #ff0057;
-    --main-black: #ffffff;
-}
-
 * {
     margin: 0;
     padding: 0;
 }
-
-
-/*-----------------box-sizing and font sizing--------------*/
 
 *,
 *::before,
@@ -25,16 +11,10 @@
 
 html {
     box-sizing: border-box;
-    /* Set font size for easy rem calculations
-     * default document font size = 16px, 1rem = 16px, 100% = 16px
-     * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
-    */
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
 
-
-/*-----------------------1200px / 16px = 75em----------------------*/
 
 @media (max-width: 75em) {
     html {
@@ -43,8 +23,6 @@ html {
 }
 
 
-/*-------------------980px / 16px = 61.25em------------------------*/
-
 @media (max-width: 61.25em) {
     html {
         font-size: 58%;
@@ -52,29 +30,22 @@ html {
 }
 
 
-/*-------------------460px / 16px = 28.75em-------------------------*/
-
 @media (max-width: 28.75em) {
     html {
         font-size: 55%;
     }
 }
-
-
-/*---------------------Base styles--------------------------------*/
-
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.8rem;
-    /* 18px */
     font-weight: 400;
     line-height: 1.4;
-    color: var(--main-white);
+    color: #f0f0f0;
 }
 
 h1,
 h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 700;
     text-align: center;
 }
@@ -93,7 +64,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: var(--main-white);
+    color: #f0f0f0;
 }
 
 img {
@@ -101,18 +72,16 @@ img {
     width: 100%;
 }
 
-
 /*-------------------------nav---------------------------*/
 
 .nav {
     display: flex;
-    justify-content: Center;
+    justify-content: flex-end;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #ff0057;
-    background-image: linear-gradient(62deg, #ff0057 0%, #181719 100%);
+    background-color: #be3114;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     z-index: 10;
 }
@@ -124,23 +93,22 @@ img {
 
 .nav-list a {
     display: block;
-    font-size: 2.5rem;
-    padding: 2.0rem;
+    font-size: 2rem;
+    padding: 2rem;
 }
 
 .nav-list a:hover {
     transition: 0.8s;
-    background: var(--main-blue);
+    background: #45567d;
 }
 
 @media (max-width: 28.75em) {
     .nav-list a {
         display: inline-block;
         font-size: 1.2rem;
-        padding: 1.rem;
+        padding: 1rem;
     }
 }
-
 
 /*---------------------------Welcome section--------------------------*/
 
@@ -164,7 +132,7 @@ img {
 .welcome-section>p {
     font-size: 3rem;
     font-weight: 200;
-    color: var(--main-red);
+    color: #a3d4f5;
 }
 
 .welcome-section>h3 {
@@ -181,14 +149,17 @@ img {
         height: 30%;
         border-radius: 50%;
     }
+
     .welcome-section>h1 {
         font-size: 3rem;
     }
+
     .welcome-section>p {
         font-size: 1.5rem;
         font-weight: 200;
-        color: var(--main-red);
+        color: #a3d4f5;
     }
+
     .welcome-section>h3 {
         font-size: 1.5rem;
         font-weight: 100;
@@ -196,19 +167,18 @@ img {
     }
 }
 
-
 /*--------------------------Projects section------------------------*/
 
 .projects-section {
     text-align: center;
     padding: 10rem 2rem;
-    background: var(--main-blue);
+    background: #45567d;
 }
 
 .projects-section-header {
     max-width: 640px;
     margin: 0 auto 6rem auto;
-    border-bottom: 0.2rem solid var(--main-white);
+    border-bottom: 0.2rem solid #f0f0f0;
 }
 
 @media (max-width: 28.75em) {
@@ -217,8 +187,7 @@ img {
     }
 }
 
-
-/* "Automagic" image grid using no media queries */
+/* using "Automagic" image grid so that we don't require media queries */
 
 .projects-grid {
     display: grid;
@@ -234,19 +203,20 @@ img {
     .projects-section {
         padding: 6rem 1rem;
     }
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
 }
 
 .project {
-    background: var(--main-gray);
+    background: #303841;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
 }
 
 .code {
-    color: var(--main-gray);
+    color: #303841;
     transition: color 0.3s ease-out;
 }
 
@@ -273,12 +243,12 @@ img {
 
 .btn-show-all {
     font-size: 2rem;
-    background: var(--main-gray);
+    background:#303841;
     transition: background 0.3s ease-out;
 }
 
 .btn-show-all:hover {
-    background: var(--main-red);
+    background: #a3d4f5;
 }
 
 .btn-show-all:hover>i {
@@ -297,76 +267,7 @@ img {
     }
 }
 
-
 /*-----------------------------Contact section-------------------------*/
-
-.testimonial-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background-color: #ff0057;
-    background-image: linear-gradient(62deg, #ff0057 0%, #181719 100%);
-}
-
-.testimonial-section-header {
-    max-width: 640px;
-    margin: 0 auto 6rem auto;
-    border-bottom: 0.2rem solid var(--main-white);
-}
-
-.testimonial-section>img {
-    width: 10%;
-    height: 20%;
-    border-radius: 50%;
-}
-
-.testimonial-section>p {
-    font-size: 3rem;
-    font-weight: 200;
-    font-style: italic;
-    color: var(--main-red);
-}
-
-.testimonial-section>h3 {
-    font-size: 2rem;
-    letter-spacing: 1px;
-    font-weight: 200;
-    font-style: italic;
-    padding: 10px;
-    color: var(--main-black);
-}
-
-@media (max-width: 28.75em) {
-    .testimonial-section>img {
-        width: 40%;
-        padding-top: 5px;
-        height: 30%;
-        border-radius: 50%;
-    }
-    .testimonial-section-header {
-        font-size: 3rem;
-    }
-    .testimonial-section>h1 {
-        font-size: 3rem;
-    }
-    .testimonial-section>p {
-        font-size: 1.5rem;
-        font-weight: 200;
-        font-style: italic;
-        color: var(--main-red);
-    }
-    .testimonial-section>h3 {
-        font-size: 1.5rem;
-        letter-spacing: 1px;
-        font-weight: 200;
-        padding: 10px;
-        font-style: italic;
-        color: var(--main-black);
-    }
-}
 
 .contact-section {
     display: flex;
@@ -377,7 +278,7 @@ img {
     width: 100%;
     height: 80vh;
     padding: 0 2rem;
-    background: var(--main-gray);
+    background: #303841;
 }
 
 .contact-section-header>h2 {
@@ -413,7 +314,6 @@ img {
     transform: translateY(8px);
 }
 
-
 /*--------------------------------Footer---------------------------------*/
 
 footer {
@@ -421,8 +321,8 @@ footer {
     display: flex;
     justify-content: space-evenly;
     padding: 2rem;
-    background: var(--main-gray);
-    border-top: 4px solid var(--main-red);
+    background: #303841;
+    border-top: 4px solid  #be3114;
 }
 
 footer>p {
